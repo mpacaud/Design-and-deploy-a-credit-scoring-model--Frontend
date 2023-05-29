@@ -1,0 +1,4 @@
+{
+"on_lan":{"backend_url": "127.0.0.1:5000"},
+"on_line":{"backend_url": "https://hidden-savannah-70356.herokuapp.com/"}
+}
