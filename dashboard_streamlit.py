@@ -39,9 +39,9 @@ from shared_functions import txt_to_obj # Serialize SHAP for API transfer.
 
             ### Global files paths and names ###
             
-IMPORT_DATA_DIR_PATH = r'Exports\Preprocessed_data'
-IMPORT_MODELS_SUM_DIR_PATH = r'Exports\Models\Tried'
-API_SERVER_PATH = 'https://hidden-savannah-70356.herokuapp.com/' #'http://127.0.0.1:5000/'
+IMPORT_DATA_DIR_PATH = r'Exports/Preprocessed_data'
+IMPORT_MODELS_SUM_DIR_PATH = r'Exports/Models/Tried'
+API_SERVER_PATH = 'https://hidden-savannah-70356.herokuapp.com/' # OnLan: 'http://127.0.0.1:5000/'
 
 PKL_MODELS_SUM_FILE = 'models_info.pkl'
 
