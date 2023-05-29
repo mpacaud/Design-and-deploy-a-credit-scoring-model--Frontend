@@ -3,7 +3,7 @@
 #apt-get install libgomp1
 
 # If app.py
-web: streamlit run dashboard_streamlit.py #gunicorn dashboard_streamlit:app #--bind=0.0.0.0 --timeout 600
+web: sh setup.sh && streamlit run dashboard_streamlit.py #gunicorn dashboard_streamlit:app #--bind=0.0.0.0 --timeout 600
 
 #python3.9 -m waitress-serve -H localhost -P 8080 app:app
 
