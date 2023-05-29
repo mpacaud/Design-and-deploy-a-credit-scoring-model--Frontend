@@ -11,3 +11,4 @@ seaborn==0.12.2
 shap==0.41.0
 streamlit==1.22.0
 streamlit_shap==1.0.2
+lightgbm
