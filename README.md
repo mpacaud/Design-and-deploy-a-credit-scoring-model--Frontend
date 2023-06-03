@@ -18,7 +18,7 @@ This part of the project's application is splitted within many sub-parts:
 
 ### Online host address
 
-https://git.heroku.com/mysterious-refuge-87297.git
+https://mysterious-refuge-87297.herokuapp.com
 
 
 ### Further notes
