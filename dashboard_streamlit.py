@@ -45,7 +45,7 @@ from shared_functions import txt_to_obj # Serialize SHAP for API transfer.
 #      it has to be / whatever if there is a repertory prefix or not.          
 IMPORT_DATA_DIR_PATH = r'Exports/Preprocessed_data'
 IMPORT_MODELS_SUM_DIR_PATH = r'Exports/Models/Tried'
-API_SERVER_PATH = json.load(open('urls.json', 'r'))['on_lan']['backend_url'] #OnLine: 'https://hidden-savannah-70356.herokuapp.com/' # OnLan: 'http://127.0.0.1:5000/'
+API_SERVER_PATH = json.load(open('urls.json', 'r'))['on_line']['backend_url'] #OnLine: 'https://hidden-savannah-70356.herokuapp.com/' # OnLan: 'http://127.0.0.1:5000/'
 PKL_MODELS_SUM_FILE = 'models_info.pkl'
 
 
