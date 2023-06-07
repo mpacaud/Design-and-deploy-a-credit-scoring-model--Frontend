@@ -60,7 +60,7 @@ def load_data ():
     """ Load customers data."""
 
     #df = pd.read_csv(os.path.join(IMPORT_DATA_DIR_PATH, 'preprocessed_data_new_customers.csv'))
-    df = pickle.load(open(os.path.join(IMPORT_DATA_DIR_PATH, 'preprocessed_data_new_customers.pkl'), "rb"))
+    df = pd.read_pickle(os.path.join(IMPORT_DATA_DIR_PATH, 'preprocessed_data_new_customers.pkl'))
         
     return df
 
