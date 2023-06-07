@@ -44,9 +44,10 @@ from shared_functions import txt_to_obj # Serialize SHAP for API transfer.
 #      However, on linux machines (most probably the environment which will be used for deployment),
 #      it has to be / whatever if there is a repertory prefix or not.          
 IMPORT_DATA_DIR_PATH = r'Exports/Preprocessed_data'
-IMPORT_MODELS_SUM_DIR_PATH = r'Exports/Models/Tried'
-API_SERVER_PATH = json.load(open('urls.json', 'r'))['on_line']['backend_url'] #OnLine: 'https://hidden-savannah-70356.herokuapp.com/' # OnLan: 'http://127.0.0.1:5000/'
-PKL_MODELS_SUM_FILE = 'models_info.pkl'
+IMPORT_MODELS_SUM_DIR_PATH = r'Exports/Models/Selected'
+API_SERVER_PATH = json.load(open('urls.json', 'r'))['on_lan']['backend_url'] #OnLine: 'https://hidden-savannah-70356.herokuapp.com/' # OnLan: 'http://127.0.0.1:5000/'
+
+PKL_MODELS_SUM_FILE = 'selected_model_infos.pkl'
 
 
 
@@ -58,7 +59,8 @@ def load_data ():
 
     """ Load customers data."""
 
-    df = pd.read_csv(os.path.join(IMPORT_DATA_DIR_PATH, 'preprocessed_data_new_customers.csv'))
+    #df = pd.read_csv(os.path.join(IMPORT_DATA_DIR_PATH, 'preprocessed_data_new_customers.csv'))
+    df = pickle.load(open(os.path.join(IMPORT_DATA_DIR_PATH, 'preprocessed_data_new_customers.pkl'), "rb"))
         
     return df
 
@@ -314,7 +316,7 @@ with col2:
         description = "This figure shows in which measure the values of a feature influence the feature in positive or negative way\
                        to accept or deny an application by the model. In addition, it also give an idea about the customer's distribution\
                        within each feature."
-        st.markdown("<h4 style='text-align: right; color: black;'> Beeswarm plot </h4>", unsafe_allow_html=True, help=description)
+        st.markdown("<h4 style='text-align: right; color: black;'> Values influence </h4>", unsafe_allow_html=True, help=description)
            
         # Turn the SHAP graphical object to a displayable matplotlib object.
         # NB: This step is required because this SHAP figure is considered as NoneType and would generate warnings or errors as is.
