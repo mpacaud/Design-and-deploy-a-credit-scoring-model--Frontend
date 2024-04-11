@@ -1,4 +1,4 @@
-## Scoring model implementation: Frontend
+## Scoring model implementation - Frontend
 
 ### Description
 
@@ -24,5 +24,5 @@ https://mpacaud-oc-ds-p7-app-frontend.herokuapp.com
 
 ### Further notes
 
-- For reasons of server resource management, it is possible that the application is not permanently maintained on the Heroku hosting site.
-- For general explanations over the whole project got to: https://github.com/mpacaud/Scoring_model_implementation-Development.git
+- Because of server resource management, it is possible that the application is not permanently maintained on the Heroku hosting site.
+- For general explanations over the whole project go to: https://github.com/mpacaud/Design-and-deploy-a-credit-scoring-model--Frontend.git
